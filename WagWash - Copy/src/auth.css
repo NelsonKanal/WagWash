@@ -1,0 +1,57 @@
+/* Wag & Wash authentication screen and account controls */
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+  background: #f7f6f1;
+}
+.auth-card {
+  width: min(100%, 460px);
+  background: #fff;
+  border: 1px solid #e7e8df;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 18px 60px rgba(36, 55, 39, .08);
+}
+.auth-card .logo { margin-bottom: 30px; }
+.auth-eyebrow { margin-bottom: 10px; }
+.auth-card h1 {
+  margin: 0 0 10px;
+  color: #203a2b;
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.15;
+}
+.auth-description { margin: 0 0 24px; color: #68736a; line-height: 1.6; }
+.google-auth-button {
+  width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;
+  gap: 10px; border: 1px solid #d9ded6; border-radius: 12px; background: #fff;
+  color: #26392c; font: inherit; font-weight: 650; cursor: pointer;
+}
+.google-auth-button:hover { background: #f8faf7; }
+.google-auth-button:disabled { opacity: .65; cursor: wait; }
+.auth-divider { display: flex; align-items: center; gap: 12px; margin: 22px 0; color: #899188; font-size: 12px; }
+.auth-divider::before, .auth-divider::after { content: ""; height: 1px; flex: 1; background: #e7e9e3; }
+.auth-form { display: grid; gap: 16px; }
+.auth-form label { display: grid; gap: 7px; color: #34483a; font-size: 13px; font-weight: 650; }
+.auth-input-wrap {
+  display: flex; align-items: center; gap: 10px; padding: 0 13px; min-height: 48px;
+  border: 1px solid #dce1d9; border-radius: 11px; color: #829083; background: #fff;
+}
+.auth-input-wrap:focus-within { border-color: #668c6b; box-shadow: 0 0 0 3px rgba(102, 140, 107, .12); }
+.auth-input-wrap input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: #26392c; font: inherit; font-size: 14px; }
+.auth-submit { width: 100%; justify-content: center; margin-top: 4px; }
+.auth-switch { margin: 22px 0 0; text-align: center; color: #69766c; font-size: 13px; }
+.auth-switch button { padding: 0; border: 0; background: transparent; color: #315d3e; font: inherit; font-weight: 750; cursor: pointer; }
+.auth-privacy { margin: 18px 0 0; text-align: center; color: #929a91; font-size: 11px; }
+.auth-notice { margin: 0; border-radius: 9px; padding: 10px 12px; background: #edf7ed; color: #2d633a; font-size: 13px; line-height: 1.5; }
+.auth-loading { color: #36533d; font-weight: 650; }
+.signed-in-email { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #66736a; font-size: 12px; }
+.signout-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 9px 11px; border: 1px solid #e0e5dd; border-radius: 10px; background: #fff; color: #34483a; font: inherit; font-size: 12px; font-weight: 650; cursor: pointer; }
+.signout-button:hover { background: #f5f7f3; }
+@media (max-width: 650px) {
+  .auth-card { padding: 25px 20px; border-radius: 18px; }
+  .signed-in-email { display: none; }
+  .signout-button span { display: none; }
+  .signout-button { padding: 9px; }
+}
